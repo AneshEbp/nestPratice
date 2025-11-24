@@ -1,0 +1,15 @@
+import { IsOptional, IsString, ValidateIf } from 'class-validator';
+
+export class UpdateUserDto {
+  @IsOptional()
+  @IsString()
+  name: string;
+
+  @IsOptional()
+  @IsString()
+  oldpassword: string;
+
+  @IsOptional()
+  @IsString()
+  newPassword: string;
+}
