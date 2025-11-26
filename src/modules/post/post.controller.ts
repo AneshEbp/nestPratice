@@ -13,11 +13,11 @@ import {
 } from '@nestjs/common';
 import { PostService } from './post.service';
 import { CreatePotsDto } from './dtos/create-post.dto';
-import { Userdetails } from 'src/decorators/user.decorator';
-import { JwtAuthGuard } from 'src/guards/jwt.guard';
+import { Userdetails } from 'src/common/decorators/user.decorator';
+import { JwtAuthGuard } from 'src/common/guards/jwt.guard';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { multerOptions } from 'src/config/multer.config';
-import { FileValidationPipe } from 'src/pipes/file-validation.pipe';
+import { FileValidationPipe } from 'src/common/pipes/file-validation.pipe';
 import { UpdatePostDto } from './dtos/update-post.dto';
 
 @Controller('post')

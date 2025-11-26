@@ -3,11 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { UserModule } from './user/user.module';
-import { AuthModule } from './auth/auth.module';
-import { PostModule } from './post/post.module';
+import { UserModule } from './modules/user/user.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { PostModule } from './modules/post/post.module';
 import { MulterModule } from '@nestjs/platform-express';
 import { multerOptions } from './config/multer.config';
+import { CommentModule } from './modules/comment/comment.module';
 
 @Module({
   imports: [
@@ -33,6 +34,8 @@ import { multerOptions } from './config/multer.config';
     AuthModule,
 
     PostModule,
+
+    CommentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
